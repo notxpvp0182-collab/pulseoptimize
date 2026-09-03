@@ -1,0 +1,58 @@
+{
+  "pulseoptimize.config.title": "PulseOptimize",
+  "pulseoptimize.config.general": "General",
+  "pulseoptimize.config.particles": "Particles",
+  "pulseoptimize.config.animations": "Animations",
+  "pulseoptimize.config.fire": "Fire",
+  "pulseoptimize.config.water": "Water",
+  "pulseoptimize.config.explosions": "Explosions",
+  "pulseoptimize.config.combat": "Combat",
+  "pulseoptimize.config.environment": "Environment",
+  "pulseoptimize.config.diagnostics": "Diagnostics",
+  "pulseoptimize.config.ai": "AI Advisor",
+
+  "pulseoptimize.config.show_hud": "Show Performance HUD",
+  "pulseoptimize.config.auto_optimize": "Auto-Optimize",
+  "pulseoptimize.config.warnings_enabled": "Performance Warnings",
+  "pulseoptimize.config.memory_engine": "Memory Engine",
+  "pulseoptimize.config.chunk_engine": "Chunk Engine",
+  "pulseoptimize.config.entity_culling": "Entity Culling",
+  "pulseoptimize.config.block_entity_culling": "Block Entity Culling",
+
+  "pulseoptimize.config.low_fire": "Low Fire Overlay",
+  "pulseoptimize.config.clear_water": "Clear Water",
+  "pulseoptimize.config.water_fog": "Reduce Water Fog",
+  "pulseoptimize.config.underwater_particles": "Reduce Underwater Particles",
+
+  "pulseoptimize.config.exp_particles": "Reduce Explosion Particles",
+  "pulseoptimize.config.exp_smoke": "Reduce Explosion Smoke",
+  "pulseoptimize.config.exp_debris": "Reduce Explosion Debris",
+  "pulseoptimize.config.exp_screen": "Reduce Explosion Screen Effects",
+
+  "pulseoptimize.config.crystal_render": "Optimise Crystal Rendering",
+  "pulseoptimize.config.crystal_particles": "Reduce Crystal Particles",
+  "pulseoptimize.config.crystal_anim": "Reduce Crystal Animation",
+  "pulseoptimize.config.item_render": "Optimise Item Rendering",
+
+  "pulseoptimize.config.fog_reduce": "Reduce Fog",
+  "pulseoptimize.config.rain_opt": "Optimise Rain",
+  "pulseoptimize.config.snow_opt": "Optimise Snow",
+  "pulseoptimize.config.cloud_opt": "Optimise Clouds",
+  "pulseoptimize.config.portal_effect": "Optimise Portal Effect",
+  "pulseoptimize.config.potion_effect": "Optimise Potion Effect",
+
+  "pulseoptimize.config.anim_water": "Water Animation",
+  "pulseoptimize.config.anim_lava": "Lava Animation",
+  "pulseoptimize.config.anim_fire": "Fire Animation",
+  "pulseoptimize.config.anim_portal": "Portal Animation",
+  "pulseoptimize.config.anim_enchantment": "Enchantment Animation",
+  "pulseoptimize.config.anim_terrain": "Terrain Animation",
+  "pulseoptimize.config.anim_weather": "Weather Animation",
+
+  "pulseoptimize.diagnostics.title": "PulseOptimize Diagnostics",
+
+  "key.categories.pulseoptimize": "PulseOptimize",
+  "key.pulseoptimize.toggle_hud": "Toggle HUD",
+  "key.pulseoptimize.open_diagnostics": "Open Diagnostics",
+  "key.pulseoptimize.toggle_auto_optimize": "Toggle Auto-Optimize"
+}

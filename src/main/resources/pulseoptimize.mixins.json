@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "dev.ahmad.pulseoptimize.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinGameRenderer",
+    "MixinParticleManager",
+    "MixinWorldRenderer",
+    "MixinInGameHud",
+    "MixinFireBlockRenderer",
+    "MixinBackgroundRenderer"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
