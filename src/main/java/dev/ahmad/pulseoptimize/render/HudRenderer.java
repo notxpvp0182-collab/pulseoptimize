@@ -53,7 +53,7 @@ public class HudRenderer {
      */
     public void render(DrawContext context) {
         MinecraftClient client = MinecraftClient.getInstance();
-        if (client == null || client.options.debugEnabled) return; // don't duplicate F3
+        if (client == null || client.getDebugHud().shouldShowDebugHud()) return; // don't duplicate F3
 
         String[] lines = buildLines();
         int width  = longestLineWidth(client, lines) + PADDING * 2;
