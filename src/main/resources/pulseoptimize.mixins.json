@@ -7,8 +7,7 @@
     "MixinParticleManager",
     "MixinWorldRenderer",
     "MixinInGameHud",
-    "MixinFireBlockRenderer",
-    "MixinBackgroundRenderer"
+    "MixinFireBlockRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

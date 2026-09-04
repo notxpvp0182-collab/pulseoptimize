@@ -8,45 +8,33 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 
-/**
- * Registers and handles PulseOptimize keybindings.
- * <p>
- * Default bindings:
- * <ul>
- *   <li>Toggle HUD — unbound (user sets)</li>
- *   <li>Open Diagnostics — unbound</li>
- *   <li>Toggle Auto-Optimize — unbound</li>
- * </ul>
- */
 public class KeybindManager {
-
-    private static final String CATEGORY = "key.categories.pulseoptimize";
 
     private KeyBinding toggleHud;
     private KeyBinding openDiagnostics;
     private KeyBinding toggleAutoOptimize;
 
-    /**
-     * Registers keybinds with Fabric and attaches a tick listener to handle presses.
-     */
+    private static final KeyBinding.Category KEYBIND_CATEGORY =
+            KeyBinding.Category.create("key.categories.pulseoptimize");
+
     public void register() {
         toggleHud = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.pulseoptimize.toggle_hud",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_UNKNOWN,
-                CATEGORY));
+                KEYBIND_CATEGORY));
 
         openDiagnostics = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.pulseoptimize.open_diagnostics",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_UNKNOWN,
-                CATEGORY));
+                KEYBIND_CATEGORY));
 
         toggleAutoOptimize = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.pulseoptimize.toggle_auto_optimize",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_UNKNOWN,
-                CATEGORY));
+                KEYBIND_CATEGORY));
 
         ClientTickEvents.END_CLIENT_TICK.register(this::handleKeys);
     }
@@ -56,16 +44,12 @@ public class KeybindManager {
             PulseOptimize.getConfig().showHud = !PulseOptimize.getConfig().showHud;
             PulseOptimize.getConfig().save();
         }
-
         if (openDiagnostics.wasPressed() && client.currentScreen == null) {
             client.setScreen(new dev.ahmad.pulseoptimize.ui.DiagnosticsScreen(null));
         }
-
         if (toggleAutoOptimize.wasPressed() && PulseOptimize.getConfig() != null) {
             PulseOptimize.getConfig().autoOptimize = !PulseOptimize.getConfig().autoOptimize;
             PulseOptimize.getConfig().save();
-            PulseOptimize.LOGGER.info("[PulseOptimize] Auto-optimize: {}",
-                    PulseOptimize.getConfig().autoOptimize ? "enabled" : "disabled");
         }
     }
 }
