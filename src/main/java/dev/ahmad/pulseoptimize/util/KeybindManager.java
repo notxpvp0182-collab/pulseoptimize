@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class KeybindManager {
@@ -15,7 +16,7 @@ public class KeybindManager {
     private KeyBinding toggleAutoOptimize;
 
     private static final KeyBinding.Category KEYBIND_CATEGORY =
-            KeyBinding.Category.create("key.categories.pulseoptimize");
+            KeyBinding.Category.create(Identifier.of("pulseoptimize", "keybindings"));
 
     public void register() {
         toggleHud = KeyBindingHelper.registerKeyBinding(new KeyBinding(
